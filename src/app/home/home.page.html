@@ -11,6 +11,7 @@
   <ion-card *ngFor="let list of article?.articles" (click)="goToSinglePage(list)">
     <ion-img [src]="list.urlToImage"></ion-img>
     <ion-card-content>
+      <p>{{list.publishedAt | date}}</p>
       <ion-card-title>{{list.title}}</ion-card-title>
 
       <!-- <p>{{list.description}}</p> -->

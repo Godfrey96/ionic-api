@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
 
 
   ngOnInit(): void {
-    this.feedService.getNews("top-headlines?country=sa").subscribe(data => {
+    this.feedService.getNews("top-headlines?country=us&category=business").subscribe(data => {
       this.article = data;
       console.log(data)
     });
