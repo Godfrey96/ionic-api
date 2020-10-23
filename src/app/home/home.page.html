@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true>
+
+  <ion-card *ngFor="let list of article?.articles" (click)="goToSinglePage(list)">
+    <ion-img [src]="list.urlToImage"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{list.title}}</ion-card-title>
+
+      <!-- <p>{{list.description}}</p> -->
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card *ngFor="let list of article?.articles">
+    <ion-img [src]="list.urlToImage"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{list.publishedAt | date}}</ion-card-subtitle>
+      <ion-card-title>{{list.title}}</ion-card-title>
+    </ion-card-header>
+  </ion-card> -->
+
+</ion-content>
